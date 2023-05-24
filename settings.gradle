@@ -12,6 +12,8 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "validation_3ds"
+
+
 include ':app'
-include ':3DSModule'
+rootProject.name = "validation_3ds"
+include ':validation3DS'

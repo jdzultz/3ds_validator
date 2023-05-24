@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        myClass = WebViewLibrary(this);
+        myClass = WebViewLibrary(this, "https://qa.apimop.xcaret.com/api/Payment/GetGatewayPayment/");
         observe(myClass.getGateway(), ::onStateChange)
 
         val myButton = findViewById<Button>(R.id.my_button)
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     fun myButtonClick(view: View) {
         myClass.getCallGateway(
             GatewayPayload(
-                salesChannel = "WEB",
+                salesChannel = "90",
                 currencyCode = "GBP",
                 card =  CardPayload(
                     cardNumber = "4000000000001091",
